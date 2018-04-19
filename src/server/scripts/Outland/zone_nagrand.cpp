@@ -714,10 +714,10 @@ class go_warmaul_prison : public GameObjectScript
         }
 };
 
-class npc_lump_18354 : public CreatureScript
+class npc_lump_18351 : public CreatureScript
 {
 public:
-    npc_lump_18354() : CreatureScript("npc_lump_18354") {}
+    npc_lump_18351() : CreatureScript("npc_lump_18351") {}
 
     enum script_enums
     {
@@ -732,9 +732,9 @@ public:
         MENU_YOU_BRING_DA_WAR = 21294
     };
 
-    struct npc_lump_18354AI : public ScriptedAI
+    struct npc_lump_18351AI : public ScriptedAI
     {
-        npc_lump_18354AI(Creature* creature) : ScriptedAI(creature) { Initialize(); }
+        npc_lump_18351AI(Creature* creature) : ScriptedAI(creature) { Initialize(); }
 
         EventMap  _events;
         bool      _in_combat;
@@ -857,7 +857,7 @@ public:
 
     CreatureAI* GetAI(Creature* creature) const
     {
-        return new npc_lump_18354AI(creature);
+        return new npc_lump_18351AI(creature);
     }
 };
 
@@ -870,5 +870,5 @@ void AddSC_nagrand()
     new go_corkis_prison();
     new npc_kurenai_captive();
     new go_warmaul_prison();
-    new npc_lump_18354();
+    new npc_lump_18351();
 }
