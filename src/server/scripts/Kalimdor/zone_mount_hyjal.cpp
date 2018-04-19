@@ -20,10 +20,10 @@
 #include "script_helper.h"
 
 
-class npc_hyjal_faerie_dragon_39926 : public CreatureScript
+class npc_hyjal_faerie_dragon_39921 : public CreatureScript
 {
 public:
-    npc_hyjal_faerie_dragon_39926() : CreatureScript("npc_hyjal_faerie_dragon_39926") {}
+    npc_hyjal_faerie_dragon_39921() : CreatureScript("npc_hyjal_faerie_dragon_39921") {}
 
     enum script_enums
     {
@@ -38,9 +38,9 @@ public:
         TEXT_INCITER_FOUND_ME = 39945,
     };
 
-    struct npc_hyjal_faerie_dragon_39926AI : public ScriptedAI
+    struct npc_hyjal_faerie_dragon_39921AI : public ScriptedAI
     {
-        npc_hyjal_faerie_dragon_39926AI(Creature* creature) : ScriptedAI(creature) { Initialize(); }
+        npc_hyjal_faerie_dragon_39921AI(Creature* creature) : ScriptedAI(creature) { Initialize(); }
 
         EventMap  _events;
         uint8     _seek_stage;
@@ -160,7 +160,7 @@ public:
 
     CreatureAI* GetAI(Creature* creature) const
     {
-        return new npc_hyjal_faerie_dragon_39926AI(creature);
+        return new npc_hyjal_faerie_dragon_39921AI(creature);
     }
 };
 
@@ -169,5 +169,5 @@ public:
 
 void AddSC_mount_hyjal()
 {
-    new npc_hyjal_faerie_dragon_39926();
+    new npc_hyjal_faerie_dragon_39921();
 }
