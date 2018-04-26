@@ -218,7 +218,8 @@ public:
                     if (player->GetTeamId() == TEAM_ALLIANCE)
                     {
                         player->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, sObjectMgr->GetBroadcastText(MENU_OPT_FLY_RUTTHERAN)->GetText(locale), GOSSIP_SENDER_MAIN, 1);
-                        player->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, sObjectMgr->GetBroadcastText(MENU_OPT_PENDANT)->GetText(locale), GOSSIP_SENDER_MAIN, 2);
+                        if (player->GetQuestStatus(272) == QUEST_STATUS_INCOMPLETE)
+                            player->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, sObjectMgr->GetBroadcastText(MENU_OPT_PENDANT)->GetText(locale), GOSSIP_SENDER_MAIN, 2);
                         player->SEND_GOSSIP_MENU(4914, me->GetGUID());
                     }
                     else
@@ -230,7 +231,8 @@ public:
                     if (player->GetTeamId() == TEAM_HORDE)
                     {
                         player->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, sObjectMgr->GetBroadcastText(MENU_OPT_FLY_THUNDER_BLUFF)->GetText(locale), GOSSIP_SENDER_MAIN, 1);
-                        player->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, sObjectMgr->GetBroadcastText(MENU_OPT_PENDANT)->GetText(locale), GOSSIP_SENDER_MAIN, 2);
+                        if (player->GetQuestStatus(30) == QUEST_STATUS_INCOMPLETE)
+                            player->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, sObjectMgr->GetBroadcastText(MENU_OPT_PENDANT)->GetText(locale), GOSSIP_SENDER_MAIN, 2);
                         player->SEND_GOSSIP_MENU(4918, me->GetGUID());
                     }
                     else
